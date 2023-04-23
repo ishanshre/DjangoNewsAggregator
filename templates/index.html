@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+
+{% block title %}News Aggregator{% endblock %}
+
+{% block body %}
+{% for content in contents %}
+<div class="card mt-3">
+    <div class="card-header">
+      {{content.title}}
+    </div>
+    <div class="card-body">
+        <div class="d-flex">
+            <div>
+                <img src="{{content.image}}" alt="no-image" width="250" height="150">
+            </div>
+            <div class="m-3">
+                <p class="card-text">{{content.description}}</p>
+                <a href="{{content.link}}" class="btn btn-primary" target="_blank">Go to origional website</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
