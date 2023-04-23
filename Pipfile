@@ -8,6 +8,7 @@ django = "*"
 python-dotenv = "*"
 requests = "*"
 feedparser = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

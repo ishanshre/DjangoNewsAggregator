@@ -6,7 +6,7 @@
 {% for content in contents %}
 <div class="card mt-3">
     <div class="card-header">
-      {{content.title}}
+      {{content.title}} - {{content.source_title}}
     </div>
     <div class="card-body">
         <div class="d-flex">
@@ -14,7 +14,7 @@
                 <img src="{{content.image}}" alt="no-image" width="250" height="150">
             </div>
             <div class="m-3">
-                <p class="card-text">{{content.description}}</p>
+                <p class="card-text">{{content.description|safe}}</p>
                 <a href="{{content.link}}" class="btn btn-primary" target="_blank">Go to origional website</a>
             </div>
         </div>

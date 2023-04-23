@@ -4,7 +4,7 @@ from django.db import models
 class Content(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    published_date = models.DateTimeField()
+    published_date = models.DateTimeField(null=True, blank=True)
     link = models.URLField()
     image = models.URLField(null=True, blank=True)
     source_title = models.CharField(max_length=255)
