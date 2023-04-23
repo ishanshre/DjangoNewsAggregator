@@ -2,7 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.env
+media/
+*/media
+*/*/media
+__pycache__
+*/__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+*/*/*/*/__pycache__
+db.sqlite3
 # C extensions
 *.so
 
