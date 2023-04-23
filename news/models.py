@@ -7,6 +7,16 @@ class Content(models.Model):
     published_date = models.DateTimeField()
     link = models.URLField()
     image = models.URLField(null=True, blank=True)
+    source_title = models.CharField(max_length=255)
+    guid = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
+
+
+class FeedSource(models.Model):
+    link = models.URLField()
+    title = models.CharField(max_length=255)
 
     def __str__(self):
         return self.title
